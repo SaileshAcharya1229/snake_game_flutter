@@ -93,6 +93,7 @@ class _SnakeGamePageState extends State<SnakeGamePage> {
           snakePosition.insert(0, snakeHead - 1);
       }
     });
+    snakeHead = snakePosition.first;
     if (snakeHead == foodPosition) {
       score++;
       generateFood();
@@ -100,7 +101,7 @@ class _SnakeGamePageState extends State<SnakeGamePage> {
       snakePosition.removeLast();
     }
     snakePosition.removeLast();
-    snakeHead = snakePosition.first;
+    // snakeHead = snakePosition.first;
   }
 
   Widget build(BuildContext context) {
